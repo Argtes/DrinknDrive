@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/modif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modifier Profile (en cours)"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nouveau Profil"
+        android:onClick="onClick"/>
+
+    <ListView
+        android:id="@+id/listProfil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="" />
+
+    <TextView
+        android:text="Delete Selected Note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5" />
+
+</LinearLayout>

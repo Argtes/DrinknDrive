@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:text="Nom :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nom" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="nom"
+        android:ems="10"
+        android:id="@+id/tvnom" />
+
+    <Switch
+        android:text="Je suis un Homme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homme" />
+
+    <Switch
+        android:text="Je suis jeune conducteur (A)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1" />
+
+    <TextView
+        android:text="taille :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taille" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="taille"
+        android:ems="10"
+        android:id="@+id/tvtaille" />
+
+    <TextView
+        android:text="Poids :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poids" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="poids"
+        android:ems="10"
+        android:id="@+id/tvpoids" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter Ce Profil"
+        android:onClick="onClick"/>
+
+</LinearLayout>
