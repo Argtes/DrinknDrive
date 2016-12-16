@@ -19,7 +19,9 @@
         <activity android:name=".Events" />
         <activity android:name=".CreateEvents" />
         <activity android:name=".FavDrinks" />
-        <activity android:name=".Nights"></activity>
+        <activity android:name=".Nights" />
+        <activity android:name=".AddDrinks" />
+        <activity android:name=".AddFavDrinks"></activity>
     </application>
 
 </manifest>
