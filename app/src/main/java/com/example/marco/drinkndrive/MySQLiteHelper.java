@@ -16,7 +16,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DRINKS = "drinks";
 
     private static final String DATABASE_NAME = "events.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Commande sql pour la création de la base de données
     private static final String DATABASE_CREATEVENTS = "create table "
@@ -51,7 +51,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATEPRO = "create table "
             + TABLE_PRO + "(" + COLUMN_IDPRO
             + " integer primary key autoincrement, " + COLUMN_NAMEP+" text not null, "+ COLUMN_SEXE
-            + " integer, "+ COLUMN_TAILLE+ " integer, " + COLUMN_POIDS+ "integer, "+ COLUMN_PERMIS + "boolean, );";
+            + " boolean, "+ COLUMN_TAILLE+ " INT, " + COLUMN_POIDS+ " INT, "+ COLUMN_PERMIS + " boolean);";
 
 
     public MySQLiteHelper(Context context) {
@@ -72,6 +72,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                         + newVersion + ", which will destroy all old data");
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_EVENTS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FAV);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PRO);
         onCreate(db);
     }
 }

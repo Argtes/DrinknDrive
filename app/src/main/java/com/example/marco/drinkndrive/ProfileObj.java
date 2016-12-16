@@ -4,13 +4,13 @@ package com.example.marco.drinkndrive;
  * Created by Marco on 15/12/2016.
  */
 
-public class Profile {
+public class ProfileObj {
     private long id;
     private String nom;
     private int poids;
     private boolean sexe;//0=>M 1=>F
     private boolean permis; //0=> A 1=> pas A
-    private double taille;
+    private int taille;
 
     public boolean isSexe() {
         return sexe;
@@ -28,11 +28,11 @@ public class Profile {
         this.permis = permis;
     }
 
-    public double getTaille() {
+    public int getTaille() {
         return taille;
     }
 
-    public void setTaille(double taille) {
+    public void setTaille(int taille) {
         this.taille = taille;
     }
 
@@ -54,6 +54,10 @@ public class Profile {
 
     public String getNom() {
         return nom;
+    }
+
+    public ProfileObj(String nom) {
+        this.nom = nom;
     }
 
     public void setNom(String nom) {

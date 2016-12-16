@@ -4,7 +4,7 @@ package com.example.marco.drinkndrive;
  * Created by Marco on 15/12/2016.
  */
 
-public class FavDrinksBDD {
+public class FavDrinksObj {
     private long id;
     private String nom;
     private int volume;

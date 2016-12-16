@@ -23,5 +23,5 @@
         <activity android:name=".AddDrinks" />
         <activity android:name=".AddFavDrinks"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

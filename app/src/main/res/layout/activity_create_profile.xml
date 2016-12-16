@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="nom"
+        android:text="toto"
         android:ems="10"
         android:id="@+id/tvnom" />
 
@@ -28,7 +28,7 @@
         android:text="Je suis jeune conducteur (A)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/switch1" />
+        android:id="@+id/permis" />
 
     <TextView
         android:text="taille :"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="taille"
+        android:text="120"
         android:ems="10"
         android:id="@+id/tvtaille" />
 
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="poids"
+        android:text="42"
         android:ems="10"
         android:id="@+id/tvpoids" />
 
