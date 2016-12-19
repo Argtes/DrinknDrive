@@ -15,7 +15,7 @@
         android:id="@+id/modif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Modifier Profile (en cours)"
+        android:text="Modifier Profil (delete)"
         android:onClick="onClick"/>
 
     <Button
@@ -26,7 +26,7 @@
         android:onClick="onClick"/>
 
     <ListView
-        android:id="@+id/list"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="" />

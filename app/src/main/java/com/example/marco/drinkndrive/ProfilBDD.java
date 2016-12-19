@@ -33,6 +33,9 @@ public class ProfilBDD {
     }
 
     public void createProfile(ProfileObj user){
+
+        dbHelper.onCreate(database);
+
         ContentValues values = new ContentValues();
 
         values.put(MySQLiteHelper.COLUMN_NAMEP, user.getNom());
@@ -55,6 +58,8 @@ public class ProfilBDD {
 
     public List<ProfileObj> getAllUsersName(){
 
+        dbHelper.onCreate(database);
+
         List<ProfileObj> users = new ArrayList<ProfileObj>();
         Cursor cursor = database.query(MySQLiteHelper.TABLE_PRO,
                 allColumns, null, null, null, null, null);
@@ -67,6 +72,28 @@ public class ProfilBDD {
         }
         cursor.close();
         return users;
+    }
+
+    public List<ProfileObj> getAllUsers(){
+
+        dbHelper.onCreate(database);
+
+        List<ProfileObj> users = new ArrayList<ProfileObj>();
+        Cursor cursor = database.rawQuery("select * from pro", null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            ProfileObj user = cursorToProfile(cursor);
+            users.add(user);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return users;
+    }
+
+    public void deleteTabPro(){
+
+        database.execSQL("DROP TABLE IF EXISTS pro");
     }
 
 

@@ -19,7 +19,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
 
     // Commande sql pour la création de la base de données
-    private static final String DATABASE_CREATEVENTS = "create table "
+    private static final String DATABASE_CREATEVENTS = "create table if not exists "
             + TABLE_EVENTS + "(" + COLUMN_IDEVENTS
             + " integer primary key autoincrement, " + COLUMN_DRINKS
             + " text not null);";
@@ -31,12 +31,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_NAME = "nom";
     public static final String COLUMN_ALCOOL = "alcool";
 
-    private static final String DATABASE_CREATEFAV = "create table "
+    private static final String DATABASE_CREATEFAV = "create table if not exists "
             + TABLE_FAV + "(" + COLUMN_IDFAV
             + " integer primary key autoincrement, " + COLUMN_NAME+" text not null, "+ COLUMN_ALCOOL
             + " integer);";
 
-    //creation table profile
+    //creation table profil
 
     public static final String TABLE_PRO = "pro";
     public static final String COLUMN_IDPRO = "_id";
@@ -48,10 +48,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 
 
-    private static final String DATABASE_CREATEPRO = "create table "
+    private static final String DATABASE_CREATEPRO = "create table if not exists "
             + TABLE_PRO + "(" + COLUMN_IDPRO
             + " integer primary key autoincrement, " + COLUMN_NAMEP+" text not null, "+ COLUMN_SEXE
-            + " boolean, "+ COLUMN_TAILLE+ " INT, " + COLUMN_POIDS+ " INT, "+ COLUMN_PERMIS + " boolean);";
+            + " boolean, "+ COLUMN_TAILLE+ " integer, " + COLUMN_POIDS+ " integer, "+ COLUMN_PERMIS + " boolean);";
 
 
     public MySQLiteHelper(Context context) {

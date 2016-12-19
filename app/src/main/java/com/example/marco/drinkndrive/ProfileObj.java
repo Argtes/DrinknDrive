@@ -67,7 +67,22 @@ public class ProfileObj {
     // Sera utilisée par ArrayAdapter dans la ListView
     @Override
     public String toString() {
-        return nom;
+        String texte= "";
+        texte= "nom : "+nom+", taille : "+taille +", sexe : ";
+        if(sexe) {
+            texte=texte+"Femme, poids : ";
+        }else{
+            texte= texte +"Homme, poids : ";
+        }
+
+        texte= texte+poids;
+
+        if(permis){
+            texte= texte + " et vous n'avez pas le A";
+        }else{
+            texte= texte + " et vous êtes jeune conducteur";
+        }
+        return texte;
     }
 
 }

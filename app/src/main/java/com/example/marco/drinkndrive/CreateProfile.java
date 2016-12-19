@@ -82,7 +82,6 @@ public class CreateProfile extends AppCompatActivity {
         String tempo;
         for(int i=0; i<test.size(); i++){
             tempo = test.get(i).getNom();
-            Toast.makeText(getBaseContext(), tempo+" : est le "+i+" utilisateur", Toast.LENGTH_LONG).show();
         }
 
         Intent intent = new Intent(CreateProfile.this, ProfileSelection.class);
